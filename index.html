@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
   <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!--[if lt IE 9]>
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -31,28 +32,234 @@
       <h3>
         <a id="about-me" class="anchor" href="#about-me" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About Me</h3>
 
-      <p>
-        I’m a highly skilled senior software development professional and team lead bringing over 14+ years of extensive experience in a wide range of productive web app developing.
-        <br />
-        I have advanced knowledge of JS(ES6/ES7), React/Redux, React-Native, Node, Python/Django/Flask, Angular, Vue.js, AWS, Elm, Wordpress, Laravel. As well as being strong technically I am a good communicator and diligent worker.
-        Some businesses I've worked with in the past include high profile AI, CryptoCurrency companies like <a href="https://datahub.com/" target="_blank">Datahub.com</a>, <a href="https://cardstack.com/" target="_blank">Cardstack.com</a>, <a href="https://pumapay.io/" target="_blank">PumaPay.io</a>, <a href="https://zenkraft.com" target="_blank">Zenkraft</a>, <a href="https://mathpix.com/" target="_blank">Mathpix</a> and more.
-        <br />
-        I always take responsibility for my work, care about code architecture and love challenges like solving problems, troubleshooting, debugging and building complex projects from scratch.
-      </p>
+      <div class="about-me-content">
+        <p class="intro">I'm <strong>Brian</strong>, a senior full-stack engineer and technical lead with 14+ years of experience building scalable SaaS platforms, AI-driven applications, and Web3 products.</p>
+        
+        <p>I specialize in <strong>React</strong>, <strong>Node.js</strong>, <strong>Next.js</strong>, <strong>TypeScript</strong>, <strong>Python</strong>, <strong>Web3</strong>, <strong>AI/ML</strong>, and <strong>AWS</strong>, and have led the development of complex systems used globally across fintech, edtech, crypto, and data intelligence.</p>
+        
+        <p>I've contributed to high-impact products such as <a href="https://datahub.com/" target="_blank" class="highlight">DataHub</a>, <a href="https://rekordio.com/" target="_blank" class="highlight">Rekordio</a>, <a href="https://cardstack.com/" target="_blank" class="highlight">CardStack</a>, <a href="https://pumapay.io/" target="_blank" class="highlight">PumaPay</a>, and more, frequently taking on <strong>CTO-level responsibilities</strong> driving architecture, engineering strategy, and end-to-end product execution.</p>
+        
+        <p>I care deeply about <strong>clean architecture</strong>, <strong>performance</strong>, and delivering <strong>reliable solutions</strong> that help companies scale. I love building great products, leading strong engineering teams, and turning ambitious ideas into production-ready realities.</p>
+      </div>
+      
+      <style>
+        /* Base Typography */
+        body {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+          line-height: 1.7;
+          color: #2d3748;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
 
-      <h3><a id="list-skills" class="anchor" href="#list-skills" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>List of Skills</h3>
+        /* About Me Content */
+        .about-me-content {
+          line-height: 1.8;
+          color: #4a5568;
+          font-size: 16px;
+          max-width: 800px;
+          margin: 0 auto 2rem;
+        }
 
-      <ul>
-        <li>JS(ES6,7), React/Redux, React-Native, Typescript, Angular, Vue.js, Elm, Golang, CoffeeScript, Bootstrap, Material-UI, Canvas, Sass, Less</li>
-        <li>Node.js, Express.js, Next.js, MERN, MEAN, LoopBack.js, Webpack, Gulp, Grunt</li>
-        <li>Python, Django, Flask, Gunicorn, Web2py, ...</li>
-        <li>PHP, Wordpress, Laravel, Magento 1/2, Shopify, ...</li>
-        <li>Hybrid app development with React-Native, Nativescript, Flutter, Ionic, Meteor, ... iOS, Android, Java</li>
-        <li>Amazon AWS, Firebase, Microsoft Azure, Google APIs, Digital Ocean, many other popular web services and DevOps</li>
-        <li>MVC design pattern development, Test-driven development, REST APIs, GraphQL</li>
-        <li>Databases - MongoDB, PostgreSQL, MySQL, MS SQL, SQLite, CassandraDB, NoSQL, Neo4j db ...</li>
-        <li>PM tools – Jira, Trello, Basecamp, Asana, FogBugz, Github, GitLab, Bitbucket .. Version Control – Git, SVN, Mercurial</li>
-      </ul>
+        .about-me-content .intro {
+          font-size: 1.15rem;
+          line-height: 1.8;
+          color: #2d3748;
+          margin-bottom: 1.5em;
+          font-weight: 400;
+        }
+
+        .about-me-content p {
+          margin-bottom: 1.5em;
+          text-align: justify;
+          hyphens: auto;
+        }
+
+        .about-me-content strong {
+          color: #2c5282;
+          font-weight: 600;
+          letter-spacing: 0.3px;
+        }
+
+        .about-me-content a.highlight {
+          color: #2b6cb0;
+          text-decoration: none;
+          border-bottom: 1px solid #90cdf4;
+          transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+          padding-bottom: 1px;
+          font-weight: 500;
+        }
+
+        .about-me-content a.highlight:hover {
+          color: #2c5282;
+          border-bottom-color: #2c5282;
+        }
+
+        /* Skills Section Styling */
+        .skills-categories {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          gap: 1.5rem;
+          margin: 2rem 0 3rem;
+        }
+
+        .skill-category {
+          background: #ffffff;
+          border-radius: 8px;
+          padding: 1.75rem;
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+          border: 1px solid #e2e8f0;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .skill-category:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+          border-color: #cbd5e0;
+        }
+
+        .skill-category h4 {
+          color: #2d3748;
+          font-size: 1.1rem;
+          margin: 0 0 0.75rem 0;
+          font-weight: 600;
+          position: relative;
+          padding-bottom: 0.5rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+        
+        .skill-category h4 i {
+          color: #4299e1;
+          width: 1.25rem;
+          text-align: center;
+          font-size: 1.1em;
+        }
+
+        .skill-category h4:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 40px;
+          height: 3px;
+          background: #4299e1;
+          border-radius: 3px;
+        }
+
+        .skill-category p {
+          color: #4a5568;
+          font-size: 0.95rem;
+          line-height: 1.6;
+          margin-bottom: 1.25rem;
+        }
+
+        .skill-tag-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          margin-top: 1rem;
+        }
+
+        .skill-tag {
+          display: inline-block;
+          background: #f0f9ff;
+          color: #0369a1;
+          font-size: 0.8rem;
+          padding: 0.35rem 0.75rem;
+          border-radius: 20px;
+          font-weight: 500;
+          border: 1px solid #bae6fd;
+          transition: all 0.2s ease;
+        }
+
+        .skill-tag:hover {
+          background: #e0f2fe;
+          transform: translateY(-1px);
+        }
+
+        /* Headings */
+        h3 {
+          color: #2d3748;
+          font-size: 1.5rem;
+          margin: 2.5rem 0 1.25rem;
+          padding-bottom: 0.5rem;
+          border-bottom: 1px solid #e2e8f0;
+          font-weight: 600;
+          letter-spacing: -0.01em;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+          #main-content ul {
+            grid-template-columns: 1fr;
+          }
+          
+          .about-me-content {
+            font-size: 15px;
+            padding: 0 0.5rem;
+          }
+          
+          .about-me-content .intro {
+            font-size: 1.1rem;
+          }
+        }
+      </style>
+
+      <h3><a id="technical-expertise" class="anchor" href="#technical-expertise" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Technical Expertise</h3>
+
+      <div class="skills-categories">
+        <div class="skill-category">
+          <h4 class="sub-subject"><i class="fas fa-laptop-code"></i> Frontend Development</h4>
+          <p>Architected high-performance web applications using React, Next.js, Gatsby.js, and modern JavaScript/TypeScript. Led teams in implementing scalable component libraries and state management solutions.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">JavaScript/TypeScript</span>
+            <span class="skill-tag">React/Next.js/Gatsby.js</span>
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">Vue</span>
+            <span class="skill-tag">Redux/Context API</span>
+            <span class="skill-tag">Responsive Design</span>
+            <span class="skill-tag">Web Performance</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4 class="sub-subject"><i class="fas fa-server"></i> Backend & Architecture</h4>
+          <p>Designed and implemented scalable microservices and serverless architectures. Specialized in building high-availability APIs and distributed systems.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js/Express</span>
+            <span class="skill-tag">Python/Django</span>
+            <span class="skill-tag">REST/GraphQL</span>
+            <span class="skill-tag">Microservices</span>
+            <span class="skill-tag">Serverless</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4 class="sub-subject"><i class="fas fa-link"></i> Blockchain & Web3</h4>
+          <p>Led development of decentralized applications and smart contracts, with deep expertise in Ethereum ecosystem and blockchain architecture.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Smart Contracts</span>
+            <span class="skill-tag">Ethereum/Solidity</span>
+            <span class="skill-tag">Web3.js/ethers.js</span>
+            <span class="skill-tag">DApp Development</span>
+            <span class="skill-tag">DeFi Protocols</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4><i class="fas fa-cloud"></i> Cloud & DevOps</h4>
+          <p>Architected and deployed cloud-native applications with CI/CD pipelines, infrastructure as code, and container orchestration.</p>
+          <div class="skill-tag-container">
+            <div class="skill-tag">AWS/GCP/Azure</div>
+            <div class="skill-tag">Docker/Kubernetes</div>
+            <div class="skill-tag">Terraform</div>
+            <div class="skill-tag">CI/CD Pipelines</div>
+            <div class="skill-tag">Site Reliability</div>
+          </div>
+        </div>
+      </div>
 
       <h3>
         <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contact or Hire</h3>
